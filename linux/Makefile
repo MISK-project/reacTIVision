@@ -17,6 +17,7 @@ CFLAGS = $(COPTS) $(SDL_CFLAGS) $(INCLUDES) -DLINUX -DOSC_HOST_LITTLE_ENDIAN -DN
 CXXFLAGS = $(CFLAGS)
 
 LIBS = $(SDL_LDFLAGS) -ldc1394 -lpthread -lturbojpeg
+DESTDIR=release
 
 all:	$(TARGET)
 
@@ -43,7 +44,7 @@ install: $(TARGET)
 	install -d $(DESTDIR)$(BINDIR)
 	install -d $(DESTDIR)$(PREFIX)/share/$(TARGET)
 	install -m 755 -c $(TARGET) $(DESTDIR)$(BINDIR)
-	install -m 644 -c ../README.txt $(DESTDIR)$(PREFIX)/share/$(TARGET)
+	install -m 644 -c ../README.md $(DESTDIR)$(PREFIX)/share/$(TARGET)
 	install -m 644 -c ../LICENSE.txt $(DESTDIR)$(PREFIX)/share/$(TARGET)
 	install -m 644 -c ../CHANGELOG.txt $(DESTDIR)$(PREFIX)/share/$(TARGET)
 	install -m 644 -c ../GPL.txt $(DESTDIR)$(PREFIX)/share/$(TARGET)

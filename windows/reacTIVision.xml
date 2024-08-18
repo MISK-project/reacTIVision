@@ -12,6 +12,7 @@ use default locations or specify an absolute path -->
 <!-- the TUIO server configuration specifies type, host and port
  possible types are: udp, tcp as well as web and flash -->
 	<tuio type="udp" host="127.0.0.1" port="3333" />
+    <tuio type="udp" host="127.0.0.1" port="3334"/>
 	<tuio type="tcp" host="server" port="3333" />
 	<tuio type="web" port="8080" />
 	<tuio type="flc" />
